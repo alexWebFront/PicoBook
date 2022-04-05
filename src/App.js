@@ -1,4 +1,5 @@
 import './App.css';
+import './js/main';
 import Header from '../src/components/header/Header';
 import Profile from '../src/components/profile/profile-main-page/Profile';
 import Footer from '../src/components/footer/Footer';
@@ -16,5 +17,6 @@ const App = () => {
     </div>
   );
 }
+
 
 export default App;

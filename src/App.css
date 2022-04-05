@@ -1,11 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   list-style-type: none;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
 }
 
-.main-page {}
+.button {
+  width: 120px;
+  height: 40px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 100%;
+}
+
+.button-primary {
+  background: #e0431e;
+}
+
+.button-primary:hover {
+  background: #ad381c;
+}
 
 .container-main {
   display: flex;
