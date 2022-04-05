@@ -1,0 +1,22 @@
+.header {
+    background: rgb(255, 255, 255);
+    padding: 10px 0px;
+}
+
+.header__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.menu__item--name {
+    font-size: 40px;
+    line-height: 150%;
+    font-weight: 600;
+    color: #282828;
+}
+
+.menu__item--name span {
+    color: #e0431e;
+}

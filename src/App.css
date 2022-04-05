@@ -5,37 +5,16 @@
   list-style-type: none;
 }
 
-body {
-  background: rgb(237, 238, 240);
+.main-page {}
+
+.container-main {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .container {
   max-width: 1170px;
   margin: 0 auto;
-  text-align: center;
-}
-
-
-.header {
-  background: rgb(255, 255, 255);
-  padding: 10px 0px;
-}
-
-.header__list {
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
 }
-
-.header__list--logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-}
-
-/* .header__list-item {} */
-
-/* .header__list--search {} */
-
-/* .header__list--service {} */

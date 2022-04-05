@@ -1,8 +1,11 @@
+import './profile.css'
 const Profile = () => {
     return (
-        <div className="page">
-            123123
+
+        <div className="profile">
+            profile
         </div>
+
     )
 }
 
