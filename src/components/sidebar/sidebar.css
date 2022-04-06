@@ -2,5 +2,33 @@
     padding: 15px 20px;
     width: 25%;
     height: 60vh;
-    background: #f2f2f2;
+    background: white;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sidebar-menu__item {
+
+    font-size: 20px;
+    line-height: 160%;
+    margin-bottom: 20px;
+
+}
+
+.sidebar-menu__item span {
+    color: #282828;
+}
+
+.sidebar .sidebar-menu__item .active span {
+    font-weight: 500;
+    color: #e0431e;
+    border-bottom: 1px solid black;
+}
+
+.sidebar .sidebar-menu__item span:hover {
+    color: #ad381c;
 }

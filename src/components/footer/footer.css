@@ -1,4 +1,12 @@
 .footer {
     background: rgb(255, 255, 255);
-    padding: 10px 0px;
+    width: 100%;
+}
+
+.footer__list {
+    padding: 10px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
