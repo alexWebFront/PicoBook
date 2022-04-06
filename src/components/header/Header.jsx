@@ -10,7 +10,7 @@ const Header = () => {
                         <img src={logo} alt="logo" />
                     </li>
                     <li className="menu__item menu__item--name ">
-                        {/* <p>Pico<span>Book</span></p> */}
+                        <p>Pico<span>Book</span></p>
                     </li>
                     <li className="menu__item menu__item--service ">
                         service popup
