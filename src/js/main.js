@@ -19,8 +19,8 @@ window.onload = function () {
                 count++;
                 let post = document.createElement("div");
                 post.classList.add("posts__item");
-                post.innerHTML = `<p class="post-count">Пикомысль № счетчик лайков сделать ${count}<p/>${temp}`;
-                messageOut.append(post);
+                post.innerHTML = `<p class="post-count">Пикомысль №${count}<p/>${temp}`;
+                messageOut.prepend(post);
             } else {
                 return;
             }
