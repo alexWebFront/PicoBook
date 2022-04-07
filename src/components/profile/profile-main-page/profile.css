@@ -1,5 +1,11 @@
+.profile-container {
+    margin-bottom: 40px;
+    padding: 15px 20px;
+}
+
 .profile {
- 
+    display: flex;
+    flex-wrap: wrap;
 }
 
 @media (max-width:425px) {
@@ -7,7 +13,7 @@
         display: none;
     }
 
-    .profile {
+    .profile-container {
         width: 100%;
     }
 }

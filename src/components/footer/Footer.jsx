@@ -1,7 +1,7 @@
 import './footer.css';
 
 const Footer = () => {
-    return (
+    return <>
         <div className="footer footer-container">
             <div className="page-container">
                 <ul className="footer__list">
@@ -9,7 +9,7 @@ const Footer = () => {
                 </ul>
             </div>
         </div>
-    )
+    </>
 }
 
 export default Footer;

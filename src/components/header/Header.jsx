@@ -2,7 +2,7 @@ import './header.css';
 import logo from "./../image/logo/picom-logo-header.svg";
 
 const Header = () => {
-    return (
+    return <>
         <div className="header header-container">
             <div className="page-container">
                 <ul className="header__list header__menu">
@@ -18,7 +18,7 @@ const Header = () => {
                 </ul>
             </div>
         </div>
-    )
+    </>
 }
 
 export default Header;

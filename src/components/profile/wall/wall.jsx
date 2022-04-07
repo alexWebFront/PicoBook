@@ -1,19 +1,18 @@
+import PostAction from './post-action/Post-action';
+import PostsItems from './posts-items/Posts-items';
 import './wall.css';
 
 
 const Wall = () => {
-    return (
-        <div className="wall wall-container">
+
+    return <>
+        <div className="wall wall-container border-radius">
             <div className="posts">
-                <div className="posts__action">
-                    <textarea className="posts__field" placeholder='Durov, bring back the wall...'></textarea>
-                    <button className="posts__send button-primary button">Тык!</button>
-                </div>
-                <div className="posts__items">
-                </div>
+                <PostAction />
+                <PostsItems />
             </div>
         </div>
-    )
+    </>
 }
 
 export default Wall;

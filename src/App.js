@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import './App.css';
-import './js/main';
 
 import Header from '../src/components/header/Header';
 import Profile from '../src/components/profile/profile-main-page/Profile';
@@ -23,12 +22,12 @@ const App = () => {
           <Sidebar />
           <div className='main-container'>
             <Routes>
-              <Route path='/profile' element={<Profile />} />
-              <Route path='/dialogs' element={<Dialogs />} />
-              <Route path='/news' element={<News />} />
-              <Route path='/music' element={<Music />} />
-              <Route path='/video' element={<Video />} />
-              <Route path='/settings' element={<Settings />} />
+              <Route path='/profile/*' element={<Profile />} />
+              <Route path='/dialogs/*' element={<Dialogs />} />
+              <Route path='/news/*' element={<News />} />
+              <Route path='/music/*' element={<Music />} />
+              <Route path='/video/*' element={<Video />} />
+              <Route path='/settings/*' element={<Settings />} />
             </Routes>
           </div>
         </div>

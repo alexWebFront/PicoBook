@@ -2,10 +2,9 @@ import './sidebar.css';
 import { NavLink } from 'react-router-dom';
 
 const Sidebar = () => {
-    return (
-        <nav className="sidebar">
+    return <>
+        <nav className="sidebar sidebar-container content-container border-radius">
             <ul className="sidebar-menu">
-
                 <li className="sidebar-menu__item">
                     <NavLink to="/profile">
                         <span>Профиль</span>
@@ -38,7 +37,7 @@ const Sidebar = () => {
                 </li>
             </ul>
         </nav>
-    )
+    </>
 }
 
 export default Sidebar;
