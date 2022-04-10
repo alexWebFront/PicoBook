@@ -13,8 +13,9 @@ import Video from './components/video/Video';
 import Settings from './components/settings/Settings';
 
 
-const App = () => {
-  return (
+
+const App = (props) => {
+  return <>
     <BrowserRouter>
       <Header />
       <div className="main-page page-container">
@@ -22,8 +23,8 @@ const App = () => {
           <Sidebar />
           <div className='main-container'>
             <Routes>
-              <Route path='/profile/*' element={<Profile />} />
-              <Route path='/dialogs/*' element={<Dialogs />} />
+              <Route path='/profile/*' element={<Profile addPost={props.addPost} profilePage={props.state.profilePage} />} />
+              <Route path='/dialogs/*' element={<Dialogs messagesPage={props.state.messagesPage} />} />
               <Route path='/news/*' element={<News />} />
               <Route path='/music/*' element={<Music />} />
               <Route path='/video/*' element={<Video />} />
@@ -34,7 +35,7 @@ const App = () => {
       </div>
       <Footer />
     </BrowserRouter >
-  );
-};
+  </>
+}
 
 export default App;

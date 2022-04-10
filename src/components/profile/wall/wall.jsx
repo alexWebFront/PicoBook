@@ -3,15 +3,23 @@ import PostsItems from './posts-items/Posts-items';
 import './wall.css';
 
 
-const Wall = () => {
+
+
+const Wall = (props) => {
+
+    const PostsElements = props.postsData.map((item) => {
+        return <>
+            <PostsItems id={item.id} postMessage={item.message} />
+        </>
+    })
 
     return <>
         <div className="wall wall-container border-radius">
             <div className="posts">
-                <PostAction />
-                <PostsItems />
+                <PostAction addPost={props.addPost} />
             </div>
         </div>
+        {PostsElements}
     </>
 }
 
