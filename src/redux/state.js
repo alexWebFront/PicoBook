@@ -1,13 +1,12 @@
 let rerenderTree = () => {
     console.log('state change');
 }
+
 let state = {
     profilePage: {
         postsData: [],
         newPostText: '',
-        postCount: [
-            { id: 0 },
-        ],
+        postsCount: 0,
     },
 
     messagesPage: {
@@ -32,10 +31,10 @@ window.state = state;
 
 export const addPost = () => {
     if (state.profilePage.newPostText !== '') {
-        state.profilePage.postCount.id++;
+        state.profilePage.postsCount++;
         let newPost = {
-            id: state.profilePage.postCount,
             message: state.profilePage.newPostText,
+            id: state.profilePage.postsCount,
         }
         state.profilePage.postsData.unshift(newPost);
         state.profilePage.newPostText = '';

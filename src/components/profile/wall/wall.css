@@ -2,11 +2,10 @@
     background: white;
     border: none;
     text-align: left;
-    padding: 15px 20px;
+    /* padding: 15px 20px 0px 20px; */
     margin-bottom: 30px;
 }
 
 .posts {
-    padding: 0px 15px 20px 15px;
-    margin-bottom: 40px;
+    /* padding: 0px 15px 20px 15px; */
 }
