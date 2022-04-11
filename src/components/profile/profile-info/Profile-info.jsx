@@ -3,7 +3,7 @@ import './profile-info.css';
 const ProfileInfo = () => {
     return <>
         <div className="profile__info">
-            спиздить структуру личной информации из вк
+            &lt;=========== Моё ежедневное состояние в изучении реакта
         </div>
     </>
 }

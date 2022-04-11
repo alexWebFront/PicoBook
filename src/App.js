@@ -23,7 +23,11 @@ const App = (props) => {
           <Sidebar />
           <div className='main-container'>
             <Routes>
-              <Route path='/profile/*' element={<Profile addPost={props.addPost} profilePage={props.state.profilePage} />} />
+              <Route path='/profile/*' element={<Profile
+                addPost={props.addPost}
+                profilePage={props.state.profilePage}
+                updatePostText={props.updatePostText}
+              />} />
               <Route path='/dialogs/*' element={<Dialogs messagesPage={props.state.messagesPage} />} />
               <Route path='/news/*' element={<News />} />
               <Route path='/music/*' element={<Music />} />

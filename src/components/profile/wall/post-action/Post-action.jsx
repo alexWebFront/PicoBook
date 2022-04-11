@@ -6,15 +6,21 @@ const PostAction = (props) => {
     let postMessage = React.createRef();
 
     let addPost = () => {
-        debugger;
+        props.addPost();
+    }
+
+    let onPostTextChange = () => {
         let text = postMessage.current.value;
-        props.addPost(text);
+        props.updatePostText(text);
     }
 
     return <>
         <div className="posts__action">
-            {/* <textarea className="posts__field" onChange={(e) => console.log(e.currentTarget.value)}></textarea> */}
-            <textarea ref={postMessage} className="posts__field" placeholder='Durov, return the wall...'></textarea>
+            <textarea ref={postMessage} className="posts__field" placeholder='Durov, return the wall...'
+
+                onChange={onPostTextChange}
+                value={props.newPostText} />
+
             <button onClick={addPost} className="posts__send button-primary button">Тык!</button>
         </div>
     </>

@@ -10,7 +10,12 @@ const Profile = (props) => {
                 <ProfileAvatar />
                 <ProfileInfo />
             </div>
-            <Wall addPost={props.addPost} postsData={props.profilePage.postsData} />
+            <Wall
+                addPost={props.addPost}
+                postsData={props.profilePage.postsData}
+                newPostText={props.profilePage.newPostText}
+                updatePostText={props.updatePostText}
+                postCount={props.profilePage.postCount} />
         </div>
     </>
 }
