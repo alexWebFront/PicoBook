@@ -3,6 +3,7 @@ import './post-action.css';
 
 
 const PostAction = (props) => {
+
     let postMessage = React.createRef();
 
     let addPost = () => {

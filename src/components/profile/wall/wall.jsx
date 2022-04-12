@@ -6,8 +6,8 @@ import './wall.css';
 
 
 const Wall = (props) => {
-
     const PostsElements = props.postsData.map((item) => {
+
         return <>
             <PostsItems postCount={props.postCount} id={item.id} postMessage={item.message} />
         </>

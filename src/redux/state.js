@@ -1,56 +1,55 @@
-let rerenderTree = () => {
-    console.log('state change');
-}
-
-let state = {
-    profilePage: {
-        postsData: [],
-        newPostText: '',
-        postsCount: 0,
-    },
-
-    messagesPage: {
-        messagesData: [
-            { id: 1, message: "Привет" },
-            { id: 2, message: "Социальная" },
-            { id: 3, message: "Сеть" },
-            { id: 4, message: "PicoBook" },
-            { id: 5, message: "!!!!" },
-        ],
-        dialogsData: [
-            { id: 1, name: "Петя" },
-            { id: 2, name: "Вася" },
-            { id: 3, name: "Коля" },
-            { id: 4, name: "Жорик" },
-            { id: 5, name: "Витя" },
-        ],
-    }
-}
-
-window.state = state;
-
-export const addPost = () => {
-    if (state.profilePage.newPostText !== '') {
-        state.profilePage.postsCount++;
-        let newPost = {
-            message: state.profilePage.newPostText,
-            id: state.profilePage.postsCount,
+let store = {
+    _state: {
+        profilePage: {
+            postsData: [],
+            newPostText: '',
+            postsCount: 0,
+        },
+        messagesPage: {
+            messagesData: [
+                { id: 1, message: "Привет" },
+                { id: 2, message: "Социальная" },
+                { id: 3, message: "Сеть" },
+                { id: 4, message: "PicoBook" },
+                { id: 5, message: "!!!!" },
+            ],
+            dialogsData: [
+                { id: 1, name: "Петя" },
+                { id: 2, name: "Вася" },
+                { id: 3, name: "Коля" },
+                { id: 4, name: "Жорик" },
+                { id: 5, name: "Витя" },
+            ],
         }
-        state.profilePage.postsData.unshift(newPost);
-        state.profilePage.newPostText = '';
-        rerenderTree(state);
-    } else {
-        return;
-    }
+    },
+    getState() {
+        return this._state;
+    },
+    callSubscriber() {
+        console.log('state change');
+    },
+    addPost() {
+        if (this._state.profilePage.newPostText !== '') {
+            this._state.profilePage.postsCount++;
+            let newPost = {
+                message: this._state.profilePage.newPostText,
+                id: this._state.profilePage.postsCount,
+            }
+            this._state.profilePage.postsData.unshift(newPost);
+            this._state.profilePage.newPostText = '';
+            this._callSubscriber(this._state);
+        } else {
+            return;
+        }
+    },
+    updatePostText(newText) {
+        this._state.profilePage.newPostText = newText;
+        this._callSubscriber(this._state);
+    },
+    subscribe(observer) {
+        this._callSubscriber = observer;
+    },
 }
 
-export const updatePostText = (newText) => {
-    state.profilePage.newPostText = newText;
-    rerenderTree(state);
-}
-
-export const subscribe = (observer) => {
-    rerenderTree = observer;
-}
-
-export default state;
+window.store = store;
+export default store;
