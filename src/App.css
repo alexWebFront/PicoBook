@@ -1,4 +1,12 @@
+:root {
+  --borderRadius: 20px;
+  --bgColor: white;
+  --textColor: #282828;
+  --textColorActive: #e0431e;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
 
 * {
   box-sizing: border-box;
@@ -37,6 +45,7 @@ body {
 
 .main-container {
   width: 80%;
+  height: 100%;
 }
 
 .content-container {
@@ -55,8 +64,4 @@ body {
 .page-container {
   max-width: 1440px;
   margin: 0 auto;
-}
-
-.border-radius {
-  border-radius: 20px;
 }

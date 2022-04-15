@@ -2,8 +2,10 @@ import './news.css';
 
 const News = () => {
     return <>
-        <div className="news news-container content-container border-radius">
-            news will be here
+        <div className="news">
+            <div className="news__container content-container">
+                news will be here
+            </div>
         </div>
     </>
 }

@@ -18,10 +18,8 @@ const PostAction = (props) => {
     return <>
         <div className="posts__action">
             <textarea ref={postMessage} className="posts__field" placeholder='Durov, return the wall...'
-
                 onChange={onPostTextChange}
                 value={props.newPostText} />
-
             <button onClick={addPost} className="posts__send button-primary button">Тык!</button>
         </div>
     </>

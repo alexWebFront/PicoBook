@@ -3,8 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 
 import Header from '../src/components/header/Header';
-import Profile from '../src/components/profile/profile-main-page/Profile';
-import Footer from '../src/components/footer/Footer';
+import Profile from '../src/components/profile/Profile';
 import Sidebar from '../src/components/sidebar/Sidebar';
 import Music from './components/music/Music';
 import Dialogs from './components/dialogs/Dialogs';
@@ -37,7 +36,6 @@ const App = (props) => {
           </div>
         </div>
       </div>
-      <Footer />
     </BrowserRouter >
   </>
 }

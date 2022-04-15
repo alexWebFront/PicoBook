@@ -1,10 +1,10 @@
 import './profile-avatar.css';
-import Ava from "../../image/avatar.jpg"
+import Avatar from "../../../image/avatar.jpg";
 
 const ProfileAvatar = () => {
     return <>
         <div className="profile__avatar">
-            <img src={Ava} alt="Аватарка" />
+            <img src={Avatar} alt="Аватарка" />
         </div>
     </>
 }

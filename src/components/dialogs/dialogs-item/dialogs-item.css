@@ -1,33 +1,8 @@
-.dialogs__items {
-    padding: 15px;
-    width: 25%;
-    height: 100%;
-    background: white;
-    border-radius: 20px;
-}
-
 .dialogs__item {
     border: 1px solid black;
     padding: 10px 0px;
 }
 
 .dialogs__item:not(:last-child) {
-    margin-bottom: 10px;
-}
-
-.dialogs__messages {
-    padding: 15px;
-    width: 75%;
-    height: 100%;
-    background: white;
-    border-radius: 20px;
-}
-
-.dialogs__message {
-    border: 1px solid black;
-    padding: 10px 0px;
-}
-
-.dialogs__message:not(:last-child) {
     margin-bottom: 10px;
 }

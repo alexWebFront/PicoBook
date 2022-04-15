@@ -1,13 +1,13 @@
-import ProfileAvatar from '../profile-avatar/Profile-avatar';
-import ProfileInfo from '../profile-info/Profile-info';
-import Wall from '../wall/wall';
+import ProfileAvatar from './profile-avatar/Profile-avatar';
+import ProfileInfo from './profile-info/Profile-info';
+import Wall from './wall/wall';
 import './profile.css'
 
 const Profile = (props) => {
 
     return <>
-        <div className="profile-wrapper">
-            <div className="profile profile-container content-container border-radius">
+        <div className="profile">
+            <div className="profile__container content-container ">
                 <ProfileAvatar />
                 <ProfileInfo />
             </div>
@@ -21,4 +21,4 @@ const Profile = (props) => {
 }
 
 
-export default Profile;
+export default Profile; 

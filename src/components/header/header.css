@@ -1,5 +1,5 @@
 .header {
-    background: rgb(255, 255, 255);
+    background: var(--bgColor);
     width: 100%;
 }
 
@@ -11,13 +11,13 @@
     flex-wrap: wrap;
 }
 
-.menu__item--name {
+.header__item-name {
     font-size: 40px;
     line-height: 150%;
     font-weight: 600;
-    color: #282828;
+    color: var(--textColor);
 }
 
-.menu__item--name span {
-    color: #e0431e;
+.header__item-name span {
+    color: var(--textColorActive);
 }

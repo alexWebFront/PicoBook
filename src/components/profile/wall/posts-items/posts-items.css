@@ -1,7 +1,7 @@
 .posts__item {
     border: 1px solid #bfbfbf;
     padding: 10px 20px;
-    background: white;
+    background: var(--bgColor);
     border-radius: 40px 0px;
     word-wrap: break-word;
 }
@@ -10,9 +10,9 @@
     margin-bottom: 15px;
 }
 
-.post-count {
+.posts__count {
     text-decoration: underline;
     font-style: italic;
     margin-bottom: 5px;
-    color: #e0431e;
+    color: var(--textColorActive);
 }
