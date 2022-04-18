@@ -9,32 +9,32 @@ const Sidebar = () => {
                 <ul className="menu">
                     <li className="menu__item">
                         <NavLink to="/profile">
-                            <span>Профиль</span>
+                            Профиль
                         </NavLink>
                     </li>
                     <li className="menu__item">
                         <NavLink to="/dialogs">
-                            <span>Сообщения</span>
+                            Сообщения
                         </NavLink>
                     </li>
                     <li className="menu__item">
                         <NavLink to="/news">
-                            <span>Новости</span>
+                            Новости
                         </NavLink>
                     </li>
                     <li className="menu__item">
                         <NavLink to="/music">
-                            <span>Музыка</span>
+                            Музыка
                         </NavLink>
                     </li>
                     <li className="menu__item">
                         <NavLink to="/video">
-                            <span>Видео</span>
+                            Видео
                         </NavLink>
                     </li>
                     <li className="menu__item">
                         <NavLink to="/settings">
-                            <span>Настройки</span>
+                            Настройки
                         </NavLink>
                     </li>
                 </ul>

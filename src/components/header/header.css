@@ -11,13 +11,13 @@
     flex-wrap: wrap;
 }
 
-.header__item-name {
+.header__name {
     font-size: 40px;
     line-height: 150%;
     font-weight: 600;
     color: var(--textColor);
 }
 
-.header__item-name span {
+.header__name span {
     color: var(--textColorActive);
 }
