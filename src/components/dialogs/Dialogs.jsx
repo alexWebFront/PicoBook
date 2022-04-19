@@ -1,8 +1,12 @@
+import React from 'react';
 import DialogItem from './dialogs-item/Dialogs-item';
-import './dialogs.css';
 import DialogMessage from './messages-item/Messages-item';
+import './dialogs.css';
+import { onDialogMessageUpdateTextActionCreator, addDialogMessageActionCreator } from '../../redux/state';
+
 
 const Dialogs = (props) => {
+
     const DialogsElements = props.messagesPage.dialogsData.map((dialog) => {
         return <>
             <DialogItem name={dialog.name} id={dialog.id} />
@@ -14,6 +18,21 @@ const Dialogs = (props) => {
         </>
     })
 
+    // кнопка и функция добавления сообщения
+    let dialogsMessage = React.createRef();
+
+
+    let sendNewMessage = () => {
+        props.dispatch(addDialogMessageActionCreator());
+    }
+
+    let onDialogsMessageChange = () => {
+        let text = dialogsMessage.current.value;
+        props.dispatch(onDialogMessageUpdateTextActionCreator(text));
+    }
+
+
+
     return <>
         <div className="dialogs">
             <div className="dialogs__container content-container">
@@ -21,8 +40,16 @@ const Dialogs = (props) => {
                     {DialogsElements}
                 </div>
                 <div className="dialogs__messages">
-                    {MessagesElements}
+                    <div className="dialogs__out">
+                        {MessagesElements}
+                    </div>
+                    <textarea ref={dialogsMessage}
+                        onChange={onDialogsMessageChange}
+                        value={props.messagesPage.newMessageText}
+                        className="posts__field" placeholder='Write your message'></textarea>
+                    <button onClick={sendNewMessage} className="posts__send button-primary button">Тык!</button>
                 </div>
+
             </div>
         </div>
     </>

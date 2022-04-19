@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 const Sidebar = () => {
     return <>
         <nav className="sidebar">
-            <div className="sidebar__container content-container">
+            <div className="sidebar__container">
                 <ul className="menu">
                     <li className="menu__item">
                         <NavLink to="/profile">

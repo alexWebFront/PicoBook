@@ -12,12 +12,13 @@ const Wall = (props) => {
             <PostsItems postCount={props.postCount} id={item.id} postMessage={item.message} />
         </>
     })
+
     return <>
         <div className="wall">
             <div className="wall__container">
                 <div className="posts">
                     <PostAction
-                        addPost={props.addPost}
+                        dispatch={props.dispatch}
                         newPostText={props.newPostText}
                         updatePostText={props.updatePostText} />
                 </div>

@@ -3,6 +3,7 @@
     padding: 15px 20px;
     display: flex;
     flex-wrap: wrap;
+    border-radius: var(--borderRadius);
 }
 
 @media (max-width:425px) {

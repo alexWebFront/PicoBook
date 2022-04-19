@@ -11,35 +11,6 @@ import News from './components/news/News';
 import Video from './components/video/Video';
 import Settings from './components/settings/Settings';
 
-
-
-// const App = (props) => {
-//   return <>
-//     <BrowserRouter>
-//       <Header />
-//       <div className="main-page page-container">
-//         <div className='main-flex'>
-//           <Sidebar />
-//           <div className='main-container'>
-//             <Routes>
-//               <Route path='/profile/*' element={<Profile
-//                 addPost={props.addPost}
-//                 profilePage={props.state.profilePage}
-//                 updatePostText={props.updatePostText}
-//               />} />
-//               <Route path='/dialogs/*' element={<Dialogs messagesPage={props.state.messagesPage} />} />
-//               <Route path='/news/*' element={<News />} />
-//               <Route path='/music/*' element={<Music />} />
-//               <Route path='/video/*' element={<Video />} />
-//               <Route path='/settings/*' element={<Settings />} />
-//             </Routes>
-//           </div>
-//         </div>
-//       </div>
-//     </BrowserRouter >
-//   </>
-// }
-
 const App = (props) => {
   return <>
     <BrowserRouter>
@@ -50,12 +21,8 @@ const App = (props) => {
             <Sidebar />
             <div className='content__main'>
               <Routes>
-                <Route path='/profile/*' element={<Profile
-                  addPost={props.addPost}
-                  profilePage={props.state.profilePage}
-                  updatePostText={props.updatePostText}
-                />} />
-                <Route path='/dialogs/*' element={<Dialogs messagesPage={props.state.messagesPage} />} />
+                <Route path='/profile/*' element={<Profile dispatch={props.dispatch} profilePage={props.state.profilePage} />} />
+                <Route path='/dialogs/*' element={<Dialogs dispatch={props.dispatch} messagesPage={props.state.messagesPage} />} />
                 <Route path='/news/*' element={<News />} />
                 <Route path='/music/*' element={<Music />} />
                 <Route path='/video/*' element={<Video />} />

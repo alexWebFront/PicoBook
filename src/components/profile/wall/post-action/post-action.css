@@ -1,3 +1,7 @@
+.wall {
+    border-radius: var(--borderRadius);
+}
+
 .posts__field {
     resize: none;
     width: 100%;
