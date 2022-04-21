@@ -3,13 +3,10 @@ import PostsItems from './posts-items/Posts-items';
 import './wall.css';
 
 
-
-
 const Wall = (props) => {
-
     const PostsElements = props.postsData.map((item) => {
         return <>
-            <PostsItems postCount={props.postCount} id={item.id} postMessage={item.message} />
+            <PostsItems postCount={props.postCount} id={item.id} postMessage={item.message}/>
         </>
     })
 
@@ -20,14 +17,13 @@ const Wall = (props) => {
                     <PostAction
                         dispatch={props.dispatch}
                         newPostText={props.newPostText}
-                        updatePostText={props.updatePostText} />
+                        updatePostText={props.updatePostText}/>
                 </div>
             </div>
         </div>
         <div className="posts-out">
             {PostsElements}
         </div>
-
     </>
 }
 
