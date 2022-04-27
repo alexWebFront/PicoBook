@@ -16,8 +16,7 @@ const Wall = (props) => {
                 <div className="posts">
                     <PostAction
                         dispatch={props.dispatch}
-                        newPostText={props.newPostText}
-                        updatePostText={props.updatePostText}/>
+                        newPostText={props.newPostText}/>
                 </div>
             </div>
         </div>

@@ -21,7 +21,7 @@ let store = {
                 {id: 4, name: "Жорик"},
                 {id: 5, name: "Витя"},
             ],
-        }
+        } 
     },
     _callSubscriber() {
         console.log('state change');

@@ -3,7 +3,6 @@ import './post-action.css';
 import { addPostActionCreator, onPostTextChangeActionCreator } from '../../../../redux/profile-reducer';
 
 const PostAction = (props) => {
-
     let addPost = () => {
         props.dispatch(addPostActionCreator());
     }

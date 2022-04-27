@@ -30,7 +30,6 @@ const Dialogs = (props) => {
         props.dispatch(onDialogMessageUpdateTextActionCreator(text));
     }
 
-
     return <>
         <div className="dialogs">
             <div className="dialogs__container content-container">
@@ -45,7 +44,7 @@ const Dialogs = (props) => {
                               onChange={onDialogsMessageChange}
                               value={props.messagesPage.newMessageText}
                               className="posts__field" placeholder='Write your message'></textarea>
-                    <button onClick={sendNewMessage} className="posts__send button-primary button">Тык!</button>
+                    <button onClick={sendNewMessage}  className="posts__send button-primary button">Тык!</button>
                 </div>
             </div>
         </div>
